@@ -7,14 +7,15 @@ function Footer() {
         <Box
             component="footer"
             sx={{
-                mt: 4,
                 py: 2,
                 textAlign: "center",
-                backgroundColor: "#eee",
+                backgroundColor: (theme) =>
+                    theme.palette.mode === "light" ? "rgba(0,0,0,0.1)" : "rgba(255,255,255,0.1)",
+                mt: 4,
             }}
         >
             <Typography variant="body2" color="text.secondary">
-                &copy; {new Date().getFullYear()} Physiotherapy Clinic. All rights reserved.
+                &copy; {new Date().getFullYear()} Physio Clinic. All rights reserved.
             </Typography>
         </Box>
     );
